@@ -16,6 +16,10 @@ The MapNode class represents a Node in MapGraph. Nodes have relationships with e
 ### Search Algorithm
 #### BFS
 In the BFS algorithm, I use queue structure to keep track of the node to be searched next. More details can be seen here: https://en.wikipedia.org/wiki/Breadth-first_search
+Limitation of BFS: BFS only accountS number of edges, not distance
+#### Dijkstra and A*
+Dijkstra and A* use priority queue to keep track of next node to be explored. A* also add heuristic estimate cost which makes the algorithm converge faster.
+
 
 
 ## Acknowledgement
