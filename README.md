@@ -2,6 +2,8 @@
 Object Oriented Design for a Map Application based on Graph Theory
 
 ## Packet roadgraph
+path: src/roadgraph
+
 Class Name: MapGraph
 This is the main class for my Graph data structure. In my design, MapGraph is a directed graph. MapGraph structure has the two classes MapNode and MapEdge as inner classes. I have chosen to use inner classes because accessing MapNode or MapEdge directly without going through MapGraph doesn't make sense. The MapNode class represents a node on a MapGraph data structure and the MapEdge class represents an edge between two MapNode's. 
 
