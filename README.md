@@ -14,3 +14,7 @@ The MapNode class represents a Node in MapGraph. Nodes have relationships with e
 ### Search Algorithm
 #### BFS
 In the BFS algorithm, I use queue structure to keep track of the node to be searched next. More details can be seen here: https://en.wikipedia.org/wiki/Breadth-first_search
+
+
+## Acknowledgement
+The starter code is from UCSD Mooc team.
