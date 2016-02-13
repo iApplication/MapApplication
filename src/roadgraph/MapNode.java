@@ -12,11 +12,13 @@ import geography.GeographicPoint;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapNode {
+public class MapNode implements Comparable{
 	
 	private GeographicPoint location;	//Represents geographical location of the vertex
 	private List<MapNode> neighbours;	//Represents the list of neighbours of the vertex
 	private List<MapEdge>	adjacentEdges;	//Represents the list of adjacent edges from the vertex
+	private Double distance; // Represents the actual distance from a specific start node
+	private Double predDistance; // Represents the predicted distance from a specific start node
 	
 	public MapNode(GeographicPoint location) {
 		this.location = location;
@@ -26,16 +28,11 @@ public class MapNode {
 	
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) return true;
-	    if (o == null || getClass() != o.getClass()) return false;
-
-	    MapNode node = (MapNode) o;
-
-	    if (location != null ? !location.equals(node.location) : node.location != null) 
-	    	return false;
-	    if (neighbours != null ? !neighbours.equals(node.neighbours) : node.neighbours != null) 
-	    	return false;
-	    return adjacentEdges != null ? adjacentEdges.equals(node.adjacentEdges) : node.adjacentEdges == null;
+		if (!(o instanceof MapNode) || (o == null)) {
+			return false;
+		}
+		MapNode node = (MapNode)o;
+		return node.location.equals(this.location);
 
 	}
 
@@ -62,6 +59,30 @@ public class MapNode {
 	public void setAdjacentEdges(List<MapEdge> adjacentEdges) {
 		this.adjacentEdges = adjacentEdges;
 	}
+
+	public Double getDistance() {
+		return distance;
+	}
+
+	public void setDistance(Double distance) {
+		this.distance = distance;
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// convert to map node, may throw exception
+		MapNode m = (MapNode)o; 
+		return ((Double)this.getDistance()).compareTo((Double) m.getDistance());
+	}
+
+	public Double getPredDistance() {
+		return predDistance;
+	}
+
+	public void setPredDistance(Double predDistance) {
+		this.predDistance = predDistance;
+	}
+	
 	
 	
 

@@ -11,13 +11,13 @@ package roadgraph;
 import geography.GeographicPoint;
 
 public class MapEdge {
-	private GeographicPoint from;
-	private GeographicPoint to;
+	private MapNode from;
+	private MapNode to;
 	private String roadName;
 	private String roadType;
 	private double length;
 	
-	public MapEdge(GeographicPoint from, GeographicPoint to, String roadName,
+	public MapEdge(MapNode from, MapNode to, String roadName,
 			String roadType, double length)
 	{
 		this.from = from;
@@ -27,19 +27,19 @@ public class MapEdge {
 		this.length = length;
 	}
 
-	public GeographicPoint getFrom() {
+	public MapNode getFrom() {
 		return from;
 	}
 
-	public void setFrom(GeographicPoint from) {
+	public void setFrom(MapNode from) {
 		this.from = from;
 	}
 
-	public GeographicPoint getTo() {
+	public MapNode getTo() {
 		return to;
 	}
 
-	public void setTo(GeographicPoint to) {
+	public void setTo(MapNode to) {
 		this.to = to;
 	}
 
