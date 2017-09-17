@@ -25,3 +25,6 @@ Dijkstra and A* use priority queue to keep track of next node to be explored. A*
 
 ## Acknowledgement
 The starter code is from UCSD Mooc team.
+
+## Author
+[Locky](https://github.com/junlulocky)
